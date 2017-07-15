@@ -1,19 +1,8 @@
-lancache installer script
-=========================
+based on https://github.com/bntjah/lc-installer
 
-## Short Changelog
-* 12-30-2016 Initial Creation, I think ;-)
-* 3-30-2017 TravisPK
-    * Removed old bind stuff
-    * Rearranged IP's to match Interface order
-    * Made almost all steps perform regardless if it has been done in prior runs of the installer. The will ensure if anything is updated in git, etc. that it will be properly deployed to the system.
-    * Updated to Nginx 1.11.12
-    * Made a version variable for nginix
-    * Cleaned up various things and bug fixes
+added : nginx vts module https://github.com/vozlt/nginx-module-vts
 
-This script has been tested under Debian 8.6 amd64.
-
-    1) git clone -b master --recursive http://github.com/bntjah/lc-installer/
+    1) git clone -b master --recursive https://github.com/ju2256/lc-installer
     2) cd lc-installer
 	3) chmod +x installer.sh
 	4) ./installer.sh
