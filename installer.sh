@@ -206,11 +206,12 @@ fi
 
 echo "Getting ready to install nginx"
 sleep 3
-
+## Nginx VTS module
+git clone git://github.com/vozlt/nginx-module-vts.git
 ## Install nginx
 cd $lc_base_folder/data/nginx-$lc_nginx_version
 sudo apt-get install libpcre3 libpcre3-dev zlib1g-dev libreadline-dev libncurses5-dev libssl-dev -y
-./configure --with-http_ssl_module --with-http_slice_module
+./configure --with-http_ssl_module --with-http_slice_module --with-http_stub_status_module --add-module=/path/to/nginx-module-vts
 sudo make
 sudo make install
 
